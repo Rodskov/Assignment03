@@ -25,7 +25,13 @@ def moneyChange():
     change = userMoney%applePrice
     return change
 
+#Step5 Let the user know the maximum number of apples the money can buy
+#      and the change
+def userKnow():
+    print(f"You can buy {maxBuy} apples and your change is {appleChange} pesos.")
+
 userMoney = askMoney()
 applePrice = askApplePrice()
 maxBuy = maxApples()
 appleChange = moneyChange()
+userKnow()
