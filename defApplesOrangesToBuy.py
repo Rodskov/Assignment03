@@ -8,7 +8,6 @@ def applesToBuy():
     apples = input("How many apples do you want to buy?: ")
     appleCost = int(apples) * applePrice 
     return appleCost 
-appleCost = applesToBuy()
 
 #Step2 Ask how many oranges the user wants to buy
 #and compute the cost
@@ -17,8 +16,17 @@ def orangesToBuy():
     oranges = input("How many oranges do you want to buy?: ")
     orangeCost = int(oranges) * orangePrice 
     return orangeCost 
-orangeCost = orangesToBuy()
 
-print(appleCost)
-print(orangeCost)
 #Step3 Compute the total cost of apples and oranges
+def computeTotal():
+    totalCost = appleCost + orangeCost
+    return totalCost
+
+#Step4 Let the user know the total amount
+def total():
+    print(f"The total amount is {totalCost}.")
+
+appleCost = applesToBuy()
+orangeCost = orangesToBuy()
+totalCost = computeTotal()
+total()
